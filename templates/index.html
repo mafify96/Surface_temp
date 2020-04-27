@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+ <style>
+ h1 {text-align: center;}
+ </style>
+ <title>ML API</title>
+
+</head>
+
+<body style="background:linear-gradient(to top, #ffffff 60%, #808080 135%);">
+
+
+     <h1>Surface Road Predcition in Real Time</h1>
+     <img src="https://ou.edu/content/dam/website-wordmarks/university-of-oklahoma-wordmark.png"width="500" height="100" alt="Oklahoma University">
+
+    {% for id in ids %}
+        <h3>{{id}}</h3>
+        <div id="{{id}}"></div>
+    {% endfor %}
+
+</body>
+
+
+<footer>
+
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var graphs = {{graphJSON | safe}};
+        var ids = {{ids | safe}};
+
+        for(var i in graphs) {
+            Plotly.plot(ids[i], // the ID of the div, created above
+                        graphs[i].data,
+                        graphs[i].layout || {});
+        }
+
+    </script>
+</footer>
+
+</html>
