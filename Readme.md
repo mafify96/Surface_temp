@@ -2,6 +2,4 @@ A mixture of Regression and Deep Learning models, used to predict the Surface Ro
 
 You can check the future predcited data through this website: https://surface-tmp.herokuapp.com/
 
-#Images In ReadMe
-
 ![](images/site.PNG)
