@@ -1,6 +1,6 @@
 Flask==1.1.2
 requests==2.22.0
-httplib2==0.17.3
+httplib2==0.18.0
 numpy>=1.9.2
 scipy>=0.15.1
 gunicorn==19.9.0
