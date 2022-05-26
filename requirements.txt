@@ -15,6 +15,6 @@ pandas==1.0.0
 jsonschema==3.2.0
 pytz==2019.3
 setuptools>=41.0.0
-tensorflow==2.0.1
+tensorflow==2.7.2
 keras==2.2.4
 zipp==2.1.0
